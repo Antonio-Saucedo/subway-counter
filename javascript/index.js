@@ -1,7 +1,5 @@
-//Set initial counter value in page
+//Set initial counter value in page and initialize count variable
 document.getElementById("count-el").value = 0;
-
-//Set count value equal to counter value in page
 let count = document.getElementById("count-el").value;
 
 //Function will increment count and set counter value in page equal to count
@@ -11,11 +9,22 @@ function add() {
 }
 
 //Function will save and reset the counter value
-let finalCount = "Previous entries: ";
+let finalCount = document.getElementById("previous").innerText;
+let saved = false;
 
 function save() {
-  finalCount += String(count) + " - ";
-  document.getElementById("previous").innerText = finalCount;
+  if (!saved) {
+    finalCount += " " + count;
+    saved = true;
+  } else {
+    finalCount += " - " + count;
+  }
   count = 0;
   document.getElementById("count-el").innerText = count;
+  document.getElementById("previous").innerText = finalCount;
+}
+
+//Function will reload page
+function reset() {
+  location.reload();
 }

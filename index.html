@@ -12,12 +12,16 @@
   </head>
   <body>
     <div class="box">
-      <h1>People entered:</h1>
-      <p id="count-el"><strong>0</strong></p>
-      <button id="increment-btn" onclick="add()"><strong>INCREMENT</strong></button>
-      <br>
-      <button id="save-btn" onclick="save()"><strong>SAVE</strong></button>
-      <p class="prev" id="previous"></p>
+      <h1>People Entered:</h1>
+      <p id="count-el">0</p>
+      <button class="green" id="increment-btn" onclick="add()">
+        INCREMENT
+      </button>
+      <br />
+      <button class="yellow" id="save-btn" onclick="save()">SAVE</button>
+      <br />
+      <button class="red" id="reset-btn" onclick="reset()">RESET</button>
+      <p id="previous">Previous Entries:</p>
     </div>
     <script src="javascript/index.js"></script>
   </body>
